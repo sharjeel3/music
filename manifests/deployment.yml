@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: musicimage 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: musicimage
+  template:
+    metadata:
+      labels:
+        app: musicimage 
+    spec:
+      containers:
+        - name: musicimage 
+          image: musicregistry.azurecr.io/musicimage
+          ports:
+          - containerPort: 80
