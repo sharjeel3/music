@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  music.api.search:
+    image: ${DOCKER_REGISTRY-}musicapisearch
+    build:
+      context: .
+      dockerfile: Music.Api.Search/Dockerfile
