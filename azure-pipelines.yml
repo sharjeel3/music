@@ -17,7 +17,7 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'musicregistry6514-auth'
-  buildContext: "Music.Api.Search"
+  buildContext: "."
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
