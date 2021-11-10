@@ -17,6 +17,7 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'musicregistry6514-auth'
+  buildContext: "Music.Api.Search"
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -38,6 +39,7 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
+        buildContext: $(buildContext)
         tags: |
           $(tag)
 
